@@ -1,64 +1,30 @@
-//Write a program to display the month name and number of days using switch-case for a given month number.
+//Write a program to classify a triangle as Equilateral, Isosceles, or Scalene based on its side lengths.
 #include <stdio.h>
+int main(){
+    int l1,l2,l3;           //defining variables to store the side of the triangle
+    printf("Enter side 1 of the triangle:");        
+    scanf("%d",&l1);        //inputting side 1 of the triangle and storing it in l1
+    printf("Enter side 2 of the triangle:");
+    scanf("%d",&l2);        //inputting side 2 of the triangle and storing it in l2
+    printf("Enter side 3 of the triangle:");
+    scanf("%d",&l3);        //inputting side 3 of the triangle and storing it in l3
 
-int main() {
-    int a;
-
-    printf("Enter the month number (1-12): ");
-    scanf("%d", &a);
-
-    switch (a) {
-        case 1:
-            printf("Month: January\n");
-            printf("Days=31");
-            break;
-        case 2:
-            printf("Month: February\n");
-            printf("Days=28/29");
-            break;
-        case 3:
-            printf("Month: March\n");
-            printf("Days=31");
-            break;
-        case 4:
-            printf("Month: April\n");
-            printf("Days=30");
-            break;
-        case 5:
-            printf("Month: May\n");
-            printf("Days=31");
-            break;
-        case 6:
-            printf("Month: June\n");
-            printf("Days=30");
-            break;
-        case 7:
-            printf("Month: July\n");
-            printf("Days=31");
-            break;
-        case 8:
-            printf("Month: August\n");
-            printf("Days=31");
-            break;
-        case 9:
-            printf("Month: September\n");
-            printf("Days=30");
-            break;
-        case 10:
-            printf("Month: October\n");
-            printf("Days=31");
-            break;
-        case 11:
-            printf("Month: November\n");
-            printf("Days=30");
-            break;
-        case 12:
-            printf("Month: December\n");
-            printf("Days=31");
-            break;
-        default:
-            printf("Invalid month number. Please enter a number between 1 and 12.\n");
-            break;
+    if (l1+l2>l3 && l2+l3>l1 && l1+l3>l2){      //checking if the trianlge is valid or not
+        if (l1 == l2&&l2 ==l3){             //to check for equilateral triangle
+            printf("it is a equi triangle");
+        }
+        else if ((l1*l1+l2*l2==l3*l3)||(l2*l2+l3*l3==l1*l1)||(l1*l1+l3*l3==l2*l2)){         //to check for right angle triangle
+            printf("it is a right triangle");
+        }
+        else if ((l1 == l2)||(l2==l3)||(l3 == l1)){         //to check for isoceles triangle
+            printf("it is a isoceles triangle");
+        }
+        else{           //if nont then scalene triangle
+            printf("it is a scalene traingle");
+        }
+    }
+    else{       //if not a valid triangle
+        printf("It is not a valid triangle");
     }
 
     return 0;
