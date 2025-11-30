@@ -48,11 +48,11 @@ int main(){
     for(int i = 0; i < m; i++){
         for(int j = 0; j < q; j++){
             for(int k=0;k<p;k++){
-                c[i][j]+=a[i][k]*b[k][j];
+                c[i][j]+=a[i][k]+b[k][j];
             }
         }
     }
-    printf("Product Matrix:");
+    printf("Final Matrix:");
     for(int i = 0; i < m; i++){
         for(int j = 0; j < q; j++){
             printf("%d ",c[i][j]);
