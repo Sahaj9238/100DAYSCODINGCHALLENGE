@@ -15,9 +15,9 @@ False*/
 #include <stdio.h>
 int main(){    
     int m,n;
-    printf("enter the no of rows in matrix A:");
+    printf("enter the no of rows in matrix:");
     scanf("%d",&m);
-    printf("enter the no of columns in matrix A:");
+    printf("enter the no of columns in matrix:");
     scanf("%d",&n);
     if(m!=n)
     {
@@ -27,7 +27,7 @@ int main(){
     for (i=0;i<m;i++)
     {
         for (j=0;j<n;j++){
-            if (x[i][j]!=x[j][i])
+            if (a[i][j]!=a[j][i])
             {
                 printf("False");
                 return 0;
