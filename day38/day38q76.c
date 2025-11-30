@@ -12,7 +12,9 @@ Input 2:
 2 1
 Output 2:
 False*/
-int m,n;
+#include <stdio.h>
+int main(){    
+    int m,n;
     printf("enter the no of rows in matrix A:");
     scanf("%d",&m);
     printf("enter the no of columns in matrix A:");
