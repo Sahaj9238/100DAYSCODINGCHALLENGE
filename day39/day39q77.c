@@ -17,9 +17,9 @@ True*/
 #include <stdio.h>
 int main(){
     int m,n;
-    printf("enter the no of rows in matrix A:");
+    printf("enter the no of rows in matrix:");
     scanf("%d",&m);
-    printf("enter the no of columns in matrix A:");
+    printf("enter the no of columns in matrix:");
     scanf("%d",&n);
      if(m != n) {
         printf("Enter a square matrix");
@@ -36,7 +36,7 @@ int main(){
 
     for(i=0;i<m;i++){
         for(j=i+1;j<n;j++){
-            if(x[i][i]==x[j][j]){
+            if(a[i][i]==a[j][j]){
                 printf("the diagonals are not distinct!!");
                 return 0;
             }
