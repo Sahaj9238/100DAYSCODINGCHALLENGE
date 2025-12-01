@@ -15,6 +15,7 @@ struct Student {
 int main() {
     struct Student s[5];
     for (int i = 0; i < 5; i++) {
+        printf("Enter the student details(Name Roll No Marks"));
         scanf("%s %d %d", s[i].name, &s[i].roll, &s[i].marks);
     }
 
