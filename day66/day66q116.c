@@ -20,7 +20,7 @@ int main() {
     scanf("%d", &n);
     int nums[n];
     for (int i = 0; i < n; i++) {
-        printf("Enter element %d: ", i + 1);
+        printf("Enter element %d: ", i );
         scanf("%d", &nums[i]);
         if (nums[i] < 0) {
             printf("Only positive numbers are allowed\n");
